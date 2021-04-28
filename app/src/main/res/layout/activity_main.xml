@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.MainActivity">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/fragment_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer" />
+
+    <FrameLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_footer_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/content_footer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:background="@color/white">
+
+            <include
+                android:id="@+id/button_discover"
+                layout="@layout/item_bottom_height" />
+
+            <include
+                android:id="@+id/button_like"
+                layout="@layout/item_bottom_height" />
+
+            <include
+                android:id="@+id/button_cart"
+                layout="@layout/item_bottom_height" />
+
+            <include
+                android:id="@+id/button_account"
+                layout="@layout/item_bottom_height" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider.Top" />
+
+    </FrameLayout>
+
+</RelativeLayout>

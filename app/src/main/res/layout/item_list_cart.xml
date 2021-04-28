@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_product"
+        android:gravity="center_vertical"
+        android:minHeight="60dp"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <com.rikyahmadfathoni.test.opaku.view.SquareImageView
+            android:id="@+id/image_product"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            tools:src="@drawable/placeholder" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="14sp"
+                tools:text="Product name" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/text_product_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                tools:text="Rp. 50.000" />
+
+            <include
+                android:id="@+id/layout_sub_total"
+                layout="@layout/item_total_produk" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.rikyahmadfathoni.test.opaku.view.SquareImageView
+        android:id="@+id/button_remove"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_clear"
+        android:background="@drawable/bg_rect_close"
+        app:tint="@color/white"
+        android:layout_gravity="center_vertical|end" />
+
+</FrameLayout>

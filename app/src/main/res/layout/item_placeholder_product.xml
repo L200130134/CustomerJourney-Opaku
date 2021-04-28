@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:orientation="vertical"
+        android:elevation="0.8dp"
+        android:background="@drawable/bg_product">
+
+        <com.rikyahmadfathoni.test.opaku.view.SquareFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/placeholder" />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/placeholder" />
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="80dp"
+            android:layout_height="16dp"
+            android:background="@color/placeholder" />
+
+    </LinearLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

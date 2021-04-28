@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="14dp">
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        tools:text="Name" />
+
+    <EditText
+        android:layout_toEndOf="@id/text_name"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/text_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:hint="@string/hint_leave_message"
+        android:background="@null" />
+
+</RelativeLayout>

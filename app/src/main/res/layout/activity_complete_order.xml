@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"
+        tools:text="Congratulation" />
+
+    <TextView
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/text_info"
+        android:id="@+id/text_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="14sp"
+        tools:text="12/04/2021 04:05:30" />
+
+    <TextView
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="40dp"
+        android:layout_below="@id/text_date"
+        android:id="@+id/text_counter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20sp"
+        android:textColor="@color/primary"
+        tools:text="04:05:30" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/text_counter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_content_product"
+            android:paddingTop="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:orientation="vertical"
+            android:elevation="5dp">
+
+            <include
+                android:id="@+id/order_id"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/bank_name"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/bank_holder_name"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/bank_number"
+                layout="@layout/item_text_value" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.InputActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/item_header_secondary" />
+
+    <EditText
+        android:layout_below="@id/header"
+        android:layout_margin="20dp"
+        android:id="@+id/input_text"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:maxLines="1"
+        style="@style/InputText" />
+
+    <TextView
+        android:enabled="false"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:id="@+id/button_save"
+        android:elevation="0.8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="@string/button_done"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/white"
+        android:background="@drawable/selector_button_add_cart" />
+
+</RelativeLayout>

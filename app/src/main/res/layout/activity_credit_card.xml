@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/item_header_secondary" />
+
+    <ImageView
+        android:id="@+id/image_card"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="20dp"
+        android:src="@drawable/credit_card" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/image_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_content_product"
+            android:paddingTop="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:orientation="vertical"
+            android:elevation="5dp">
+
+            <EditText
+                android:layout_marginBottom="20dp"
+                android:id="@+id/input_holder_name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:hint="@string/hint_input_card_holder_name"
+                style="@style/InputText" />
+
+            <EditText
+                android:layout_marginBottom="20dp"
+                android:id="@+id/input_number"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:hint="@string/hint_input_card_number"
+                style="@style/InputText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:layout_weight="1"
+                    android:id="@+id/input_expired"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:hint="@string/hint_input_card_expired"
+                    style="@style/InputText" />
+
+                <EditText
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:id="@+id/input_cvv"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:hint="@string/hint_input_cvv"
+                    style="@style/InputText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:id="@+id/button_save"
+        android:elevation="0.8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="@string/button_select"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/white"
+        android:background="@drawable/selector_button_add_cart" />
+
+</RelativeLayout>

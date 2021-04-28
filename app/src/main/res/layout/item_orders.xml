@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="14dp"
+    android:layout_marginStart="14dp"
+    android:layout_marginEnd="14dp"
+    android:layout_marginBottom="14dp"
+    android:minHeight="70dp"
+    android:background="@drawable/bg_product">
+
+    <LinearLayout
+        android:id="@+id/text1"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/text2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            tools:text="Id : 12345678" />
+
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:singleLine="true"
+            android:maxLines="1"
+            tools:text="Status" />
+
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:maxLines="1"
+            tools:text="Date : " />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/text2"
+        android:layout_marginStart="16dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_title_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            tools:text="Total" />
+
+        <TextView
+            android:id="@+id/text_value_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColor="@color/primary"
+            tools:text="Rp. 50.000" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.CheckoutActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/item_header_secondary" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:layout_below="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/address"
+                layout="@layout/item_checkout_address" />
+
+            <include
+                android:id="@+id/payment_method"
+                layout="@layout/item_checkout_shipment" />
+
+            <include
+                android:id="@+id/sub_total"
+                layout="@layout/item_checkout_total" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:enabled="false"
+        android:id="@+id/button_add_cart"
+        android:elevation="0.8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="@string/button_order_now"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/white"
+        android:background="@drawable/selector_button_add_cart" />
+
+</RelativeLayout>

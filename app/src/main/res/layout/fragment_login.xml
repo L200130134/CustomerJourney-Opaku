@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/item_header_primary" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="-20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/opaku" />
+
+                <EditText
+                    android:id="@+id/input_email"
+                    android:layout_marginTop="40dp"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/hint_input_email_address"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    style="@style/InputText" />
+
+                <EditText
+                    android:id="@+id/input_password"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPassword"
+                    android:hint="@string/hint_input_password"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    style="@style/InputText" />
+
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/button_login"
+                    android:elevation="0.8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:text="@string/button_login"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/white"
+                    android:background="@drawable/selector_button_add_cart" />
+
+                <TextView
+                    android:id="@+id/text_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:textSize="14sp"
+                    android:text="@string/info_message_login" />
+
+                <TextView
+                    android:id="@+id/button_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/primary"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="14sp"
+                    android:text="@string/button_register" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

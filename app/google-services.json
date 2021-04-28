@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "149105107384",
+    "project_id": "opaku-80e86",
+    "storage_bucket": "opaku-80e86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149105107384:android:30cf876fa51a169225af4d",
+        "android_client_info": {
+          "package_name": "com.rikyahmadfathoni.test.opaku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149105107384-8gff0qn20rehv9288ag3nqoljg6lja3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQkSjLHRuCKAwZKJsfndjxHtZgTcRh6ms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149105107384-8gff0qn20rehv9288ag3nqoljg6lja3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.OrderDetailsActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/item_header_checked" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/content_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_white_divider"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/title_order"
+                layout="@layout/item_title" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_marginBottom="12dp"
+                style="@style/Divider" />
+
+            <include
+                android:id="@+id/order_id"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/customer_id"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/status"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:visibility="gone"
+                android:id="@+id/expired"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/customer_name"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/customer_phone"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/customer_address"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/customer_payment"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/total_weight"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/total_item"
+                layout="@layout/item_text_value" />
+
+            <include
+                android:id="@+id/create_date"
+                layout="@layout/item_text_value" />
+
+            <View
+                android:id="@+id/divider2"
+                style="@style/Divider" />
+
+            <include layout="@layout/merge_product_list" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

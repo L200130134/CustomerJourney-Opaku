@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-16dp"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.ProductActivity"
+    tools:showIn="@layout/activity_product">
+
+    <FrameLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_content_product"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/content_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                tools:text="Product name" />
+
+            <TextView
+                android:id="@+id/text_product_price"
+                android:layout_below="@id/text_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                tools:text="Rp. 50.000" />
+
+            <ImageView
+                android:id="@+id/icon_like"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/text_product_name"
+                android:src="@drawable/ic_like"
+                android:background="?selectableItemBackgroundBorderless"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/text_product_price"
+                style="@style/Divider" />
+
+            <LinearLayout
+                android:id="@+id/content_info"
+                android:layout_below="@id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/info_stock"
+                    layout="@layout/item_info_product" />
+
+                <include
+                    android:id="@+id/info_brand"
+                    layout="@layout/item_info_product" />
+
+                <include
+                    android:id="@+id/info_material"
+                    layout="@layout/item_info_product" />
+
+                <include
+                    android:id="@+id/info_weight"
+                    layout="@layout/item_info_product" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/content_info"
+                style="@style/Divider" />
+
+            <TextView
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/text_product_description"
+                android:layout_below="@id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Produk description here!" />
+
+        </RelativeLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:layout_width="200dp"
+                    android:layout_height="16dp"
+                    android:background="@color/placeholder" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="100dp"
+                    android:layout_height="14dp"
+                    android:background="@color/placeholder" />
+
+                <View
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    style="@style/Divider" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="50dp"
+                    android:layout_height="14dp"
+                    android:background="@color/placeholder" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="50dp"
+                    android:layout_height="14dp"
+                    android:background="@color/placeholder" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="50dp"
+                    android:layout_height="14dp"
+                    android:background="@color/placeholder" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="50dp"
+                    android:layout_height="14dp"
+                    android:background="@color/placeholder" />
+
+                <View
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    style="@style/Divider" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:background="@color/placeholder" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:background="@color/placeholder" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_marginEnd="100dp"
+                    android:background="@color/placeholder" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_marginEnd="150dp"
+                    android:background="@color/placeholder" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </FrameLayout>
+
+</androidx.core.widget.NestedScrollView>
